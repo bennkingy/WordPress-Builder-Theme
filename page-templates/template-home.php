@@ -79,11 +79,15 @@ if ( is_front_page() ) {
 
             while ( $loop->have_posts() ) : $loop->the_post();
 
+            echo '<div/>';
+
             the_title( '<h2 class="entry-title"><a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a></h2>' ); 
         ?>
-
+    
             <div class="entry-content">
                 <?php the_content(); ?>
+            </div>
+
             </div>
 
         <?php endwhile; ?>
